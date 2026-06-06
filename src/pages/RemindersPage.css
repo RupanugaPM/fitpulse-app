@@ -1,0 +1,195 @@
+.reminders-page h1 {
+  font-size: 1.65rem;
+}
+
+.reminder-hero {
+  margin-bottom: 1.25rem;
+}
+
+.reminder-toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reminder-toggle-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.reminder-toggle-row span:last-child {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.next-reminder {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+  line-height: 1.45;
+}
+
+.next-reminder-note {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.settings-section {
+  margin-bottom: 1.25rem;
+}
+
+.interval-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.interval-btn {
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.interval-btn.active {
+  background: var(--accent);
+  color: #042f2e;
+  border-color: var(--accent);
+}
+
+.custom-interval {
+  margin-top: 0.75rem;
+  padding: 0.85rem;
+}
+
+.custom-interval label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.custom-interval-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.custom-interval-row input {
+  flex: 1;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.custom-interval .hint {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.hours-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.hours-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.hours-row select {
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.days-row {
+  display: flex;
+  gap: 0.35rem;
+  justify-content: space-between;
+}
+
+.day-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+}
+
+.day-btn.on {
+  background: var(--accent);
+  color: #042f2e;
+  border-color: var(--accent);
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.pref-workouts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pref-chip {
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+}
+
+.pref-chip.on {
+  background: var(--accent-glow);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.toggles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notif-status {
+  font-size: 0.85rem;
+  color: var(--success);
+  margin-bottom: 1rem;
+}
+
+.tip-card {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.tip-card strong {
+  display: block;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}

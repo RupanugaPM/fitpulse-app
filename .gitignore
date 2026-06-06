@@ -1,0 +1,17 @@
+node_modules
+dist
+.env
+.env.local
+*.local
+.DS_Store
+
+server/node_modules
+server/.env
+server/data/*.db
+server/data/*.db-*
+data/*.db
+data/*.db-*
+
+# Logs
+*.log
+npm-debug.log*

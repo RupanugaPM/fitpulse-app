@@ -1,0 +1,248 @@
+.home-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 0;
+}
+
+.home-greeting {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
+
+.home-hero h1 {
+  font-size: 1.85rem;
+  line-height: 1.15;
+}
+
+.streak-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--warning);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.watch-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.watch-banner div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.watch-banner span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.ai-pushup-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: inherit;
+  background: var(--accent-glow);
+  border-color: var(--accent);
+}
+
+.ai-pushup-banner div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.ai-pushup-banner strong {
+  font-size: 0.95rem;
+}
+
+.ai-pushup-banner span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.xp-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.xp-profile div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.xp-profile span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.profile-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-card.wide {
+  grid-column: 1 / -1;
+}
+
+.stat-card svg {
+  color: var(--accent);
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.stat-card .progress-bar {
+  margin-top: 0.35rem;
+}
+
+.reminder-status {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+
+.reminder-status:hover {
+  background: var(--bg-hover);
+}
+
+.reminder-status div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.reminder-status strong {
+  font-size: 0.95rem;
+}
+
+.reminder-status span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.reminder-status.off {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.next-in {
+  color: var(--accent) !important;
+}
+
+.accent-icon {
+  color: var(--accent);
+}
+
+.hydration-widget {
+  margin-bottom: 1.25rem;
+}
+
+.hydration-header {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.hydration-header div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.progress-bar-fill.water {
+  background: #38bdf8;
+}
+
+.water-btns {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.water-btns .btn {
+  flex: 1;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.section-header a {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.quick-scroll {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.quick-card-wrap {
+  min-width: 260px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.home-date {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+}

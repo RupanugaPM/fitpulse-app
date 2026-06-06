@@ -1,0 +1,54 @@
+.workout-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.workout-card.compact h3 {
+  font-size: 1rem;
+}
+
+.workout-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fav-btn {
+  color: var(--text-muted);
+  padding: 0.25rem;
+}
+
+.fav-btn.on {
+  color: var(--warning);
+}
+
+.workout-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.workout-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.workout-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.badge.cat-desk { color: #38bdf8; background: rgba(56, 189, 248, 0.15); }
+.badge.cat-cardio { color: #f472b6; background: rgba(244, 114, 182, 0.15); }
+.badge.cat-stretch { color: #a78bfa; background: rgba(167, 139, 250, 0.15); }
+.badge.cat-strength { color: #fb923c; background: rgba(251, 146, 60, 0.15); }
+.badge.cat-mobility { color: #4ade80; background: rgba(74, 222, 128, 0.15); }
+.badge.cat-core { color: #facc15; background: rgba(250, 204, 21, 0.15); }
+.badge.cat-yoga { color: #2dd4bf; background: rgba(45, 212, 191, 0.15); }

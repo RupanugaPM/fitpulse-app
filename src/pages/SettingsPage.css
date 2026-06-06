@@ -1,0 +1,102 @@
+.account-section .account-info {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.account-section .account-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.account-section .account-info span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.xp-line {
+  color: var(--accent) !important;
+  font-weight: 500;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-glow);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.account-hint {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.devices-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.settings-page h1 {
+  font-size: 1.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.theme-picker {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.theme-btn {
+  flex: 1;
+  padding: 0.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  font-weight: 500;
+}
+
+.theme-btn.active {
+  background: var(--accent);
+  color: #042f2e;
+  border-color: var(--accent);
+}
+
+.setting-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+}
+
+.setting-label input {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-version {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}

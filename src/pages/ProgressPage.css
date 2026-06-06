@@ -1,0 +1,108 @@
+.pushup-progress-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.pushup-progress-banner div {
+  flex: 1;
+}
+
+.pushup-progress-banner span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.pushup-progress-banner a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.progress-page h1 {
+  font-size: 1.65rem;
+  margin-bottom: 1rem;
+}
+
+.celebration-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+  background: var(--accent-glow);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.progress-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+
+.hl-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.hl-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.chart-section {
+  margin-bottom: 1rem;
+}
+
+.chart-wrap {
+  margin-top: 0.5rem;
+}
+
+.lifetime-stat {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.history-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.history-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.history-item span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.history-meta {
+  font-size: 0.75rem !important;
+  white-space: nowrap;
+}

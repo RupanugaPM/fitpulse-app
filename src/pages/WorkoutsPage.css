@@ -1,0 +1,106 @@
+.workouts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.workouts-header h1 {
+  font-size: 1.65rem;
+  margin-bottom: 0.25rem;
+}
+
+.btn-sm {
+  font-size: 0.85rem;
+  padding: 0.45rem 0.65rem;
+  white-space: nowrap;
+}
+
+.my-plans-section {
+  margin-bottom: 1.25rem;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.link-muted {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.library-title {
+  margin-bottom: 0.75rem;
+}
+
+.workout-list.compact {
+  gap: 0.5rem;
+}
+
+.empty-state.small {
+  font-size: 0.875rem;
+  padding: 0.5rem 0;
+}
+
+.page-sub {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.85rem;
+  color: var(--text-muted);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  outline: none;
+}
+
+.category-chips {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chip {
+  flex-shrink: 0;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: all 0.15s;
+}
+
+.chip.active {
+  background: var(--accent);
+  color: #042f2e;
+  border-color: var(--accent);
+}
+
+.workout-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}

@@ -1,0 +1,135 @@
+.onboarding {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--gradient-hero);
+  color: #f8fafc;
+}
+
+.onboarding.setup {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.skip-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.onboarding.setup .skip-btn {
+  display: none;
+}
+
+.onboarding-icon {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1.5rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.onboarding h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.onboarding > p {
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  line-height: 1.55;
+}
+
+.onboarding.setup > p {
+  color: var(--text-muted);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.dots span.active {
+  background: white;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.interval-pick {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.interval-card {
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.15s;
+}
+
+.interval-card.selected {
+  border-color: var(--accent);
+}
+
+.interval-card strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.interval-card span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.onboarding .btn-primary {
+  margin-bottom: 0.5rem;
+}
+
+.onboarding-custom {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.onboarding-custom label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.onboarding-custom input {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.onboarding-custom .hint {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

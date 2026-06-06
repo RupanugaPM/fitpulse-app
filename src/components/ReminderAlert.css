@@ -1,0 +1,59 @@
+.reminder-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1.25rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.reminder-modal {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  padding: 1.75rem 1.25rem 1.25rem;
+}
+
+.reminder-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: var(--text-muted);
+  padding: 0.35rem;
+}
+
+.reminder-pulse {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--accent-glow);
+  border: 3px solid var(--accent);
+  animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.85; }
+}
+
+.reminder-modal h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.reminder-sub {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.reminder-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
