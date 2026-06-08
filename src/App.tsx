@@ -20,6 +20,7 @@ const PushupTrackerPage = lazy(() =>
 import { useAppStore } from './store/useAppStore';
 import { useAuthStore } from './store/useAuthStore';
 import { useReminderEngine } from './hooks/useReminderEngine';
+import { useAppStateSync } from './hooks/useAppStateSync';
 import { useTheme } from './hooks/useTheme';
 import { pickReminderWorkout } from './utils/reminderWorkout';
 import type { Workout } from './types';
@@ -50,6 +51,7 @@ function AppRoutes() {
   }, []);
 
   const { scheduleNext } = useReminderEngine(onReminderFire);
+  useAppStateSync();
 
   if (!onboardingComplete && !AUTH_ROUTES.includes(location.pathname)) {
     return <OnboardingPage />;

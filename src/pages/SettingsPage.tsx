@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { useAuthStore } from '../store/useAuthStore';
-import { Droplets, Target, Trash2, LogOut, User, Watch } from 'lucide-react';
+import { migrateLocalDataToSql } from '../hooks/useAppStateSync';
+import { countLocalData, pickSyncableState } from '../utils/appStateSync';
+import { Droplets, Target, Trash2, LogOut, User, Watch, CloudUpload } from 'lucide-react';
 import './SettingsPage.css';
 
 export function SettingsPage() {
@@ -14,6 +17,27 @@ export function SettingsPage() {
   const updateHydration = useAppStore((s) => s.updateHydration);
   const updateGoals = useAppStore((s) => s.updateGoals);
   const resetProgress = useAppStore((s) => s.resetProgress);
+  const [migrateStatus, setMigrateStatus] = useState<string | null>(null);
+  const [migrating, setMigrating] = useState(false);
+
+  const localCounts = countLocalData(pickSyncableState(useAppStore.getState()));
+
+  const runMigration = async () => {
+    setMigrating(true);
+    setMigrateStatus(null);
+    try {
+      const result = await migrateLocalDataToSql();
+      setMigrateStatus(
+        result.ok
+          ? `${result.message} (${result.counts.sessions} sessions, ${result.counts.plans} custom plans, ${result.counts.statsDays} stat days)`
+          : result.message
+      );
+    } catch {
+      setMigrateStatus('Upload failed — is the API server running on port 3001?');
+    } finally {
+      setMigrating(false);
+    }
+  };
 
   return (
     <div className="page settings-page">
@@ -43,10 +67,27 @@ export function SettingsPage() {
             <button type="button" className="btn btn-secondary btn-block" onClick={() => logout()}>
               <LogOut size={18} /> Sign out
             </button>
+            <div className="sync-block">
+              <p className="account-hint">
+                This device: {localCounts.sessions} sessions, {localCounts.plans} custom plans,{' '}
+                {localCounts.statsDays} days of stats in local storage.
+              </p>
+              <button
+                type="button"
+                className="btn btn-primary btn-block"
+                disabled={migrating}
+                onClick={runMigration}
+              >
+                <CloudUpload size={18} /> Upload local data to SQL
+              </button>
+              {migrateStatus && <p className="migrate-status">{migrateStatus}</p>}
+            </div>
           </>
         ) : (
           <>
-            <p className="account-hint">Sign in to sync XP, push-ups, and progress to the cloud.</p>
+            <p className="account-hint">
+              Sign in to sync reminders, workout plans, progress, XP, and push-ups across browsers.
+            </p>
             <Link to="/login" className="btn btn-primary btn-block">
               Sign in / Register
             </Link>

@@ -101,3 +101,9 @@ CREATE TABLE IF NOT EXISTS integration_tokens (
   created_at TEXT NOT NULL DEFAULT (datetime('now')),
   UNIQUE(user_id, provider)
 );
+
+CREATE TABLE IF NOT EXISTS user_app_state (
+  user_id TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+  state_json TEXT NOT NULL,
+  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+);

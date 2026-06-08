@@ -1,5 +1,7 @@
 const API_BASE = import.meta.env.VITE_API_URL ?? '';
 
+import type { SyncableAppState } from '../utils/appStateSync';
+
 export class ApiError extends Error {
   constructor(
     message: string,
@@ -147,4 +149,16 @@ export const pushupApi = {
         createdAt: string;
       }[];
     }>('/api/pushups/sessions'),
+};
+
+export const appStateApi = {
+  get: () =>
+    api<{ state: SyncableAppState | null; updatedAt: string | null }>(
+      '/api/user/app-state'
+    ),
+  save: (state: SyncableAppState) =>
+    api<{ ok: boolean; updatedAt: string }>('/api/user/app-state', {
+      method: 'PUT',
+      body: JSON.stringify({ state }),
+    }),
 };

@@ -8,6 +8,7 @@ import authRoutes from './routes/auth.js';
 import pushupRoutes from './routes/pushups.js';
 import wearableRoutes from './routes/wearables.js';
 import integrationRoutes from './routes/integrations.js';
+import appStateRoutes from './routes/appState.js';
 
 const PORT = Number(process.env.PORT) || 3001;
 const CLIENT_URL = process.env.CLIENT_URL ?? 'http://localhost:5173';
@@ -34,6 +35,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/pushups', pushupRoutes);
 app.use('/api/wearables', wearableRoutes);
 app.use('/api/integrations', integrationRoutes);
+app.use('/api/user/app-state', appStateRoutes);
 
 app.use(
   (
